@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Obras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <img src="images/equatorial-logo-1-2048x513.png" alt="Logo" class="logo">
+    <div class="header-text">
+        <h1>Formulário de Obras</h1>
+        <p>Sistema de Gestão de Dados</p>
+    </div>
+</div>
+
+
+  <div class="container">
+    <form id="obraForm">
+      <!-- Grupo: Dados Gerais -->
+      <div class="group">
+        <h2>Dados Gerais</h2>
+        <div class="row">
+          <div class="input-group">
+            <label for="nota">Nota (*Obrigatório)</label>
+            <input type="number" id="nota" name="nota" required>
+          </div>
+          <div class="input-group">
+            <label for="pep">PEP</label>
+            <input type="text" id="pep" name="pep">
+          </div>
+          <div class="input-group">
+            <label for="regional">Regional</label>
+            <select id="regional" name="regional">
+              <option value="">Selecione</option>
+              <option value="NORTE">NORTE</option>
+              <option value="CENTRO">CENTRO</option>
+              <option value="OESTE">OESTE</option>
+              <option value="NORDESTE">NORDESTE</option>
+              <option value="SUL">SUL</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="municipio">Município</label>
+            <input type="text" id="municipio" name="municipio">
+          </div>
+          <div class="input-group">
+            <label for="tipoObra">Tipo de Obra</label>
+            <select id="tipoObra" name="tipoObra">
+              <option value="">Selecione</option>
+              <option value="Artigo 3°">Artigo 3°</option>
+              <option value="Artigo 4°">Artigo 4°</option>
+              <option value="EQUIPAMENTO">EQUIPAMENTO</option>
+              <option value="REFORÇO">REFORÇO</option>
+              <option value="RIBEIRINHO">RIBEIRINHO</option>
+              <option value="TORRE METÁLICA">TORRE METÁLICA</option>
+              <option value="TRAVESSIA">TRAVESSIA</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="descricaoObra">Descrição da Obra</label>
+            <textarea name="descricaoObra" id="descricaoObra" rows="1" cols="80"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="tranche">Tranche</label>
+            <select id="tranche" name="tranche">
+              <option value="">Selecione</option>
+              <option value="7ª Tranche">7ª Tranche</option>
+              <option value="8ª Tranche">8ª Tranche</option>
+              <option value="CANCELADO">CANCELADO</option>
+              <option value="Metas Adicionais">Metas Adicionais</option>
+              <option value="Metas Excepcionais">Metas Excepcionais</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="parceira">Parceira</label>
+            <input type="text" id="parceira" name="parceira">
+          </div>
+          <div class="input-group">
+            <label for="anoDemanda">Ano da Demanda</label>
+            <input type="number" id="anoDemanda" name="anoDemanda">
+          </div>
+          <div class="input-group">
+            <label for="anoUni">Ano Universalização</label>
+            <input type="number" id="anoUni" name="anoUni">
+          </div>
+          <div class="input-group">
+            <label for="notaAntiga">Nota Antiga</label>
+            <input type="number" id="notaAntiga" name="notaAntiga">
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo: Dados Físicos -->
+      <div class="group">
+        <h2>Dados Físicos</h2>
+        <div class="row">
+          <div class="input-group">
+            <label for="numLigacoes">N° de Ligações</label>
+            <input type="number" id="numLigacoes" name="numLigacoes">
+          </div>
+          <div class="input-group">
+            <label for="totalKm">Total de KM</label>
+            <input type="number" id="totalKm" name="totalKm" step="0.01">
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo: Licença & Outros -->
+      <div class="group">
+        <h2>Licença Ambiental & Outros</h2>
+        <div class="row">
+          <div class="input-group">
+            <label for="licencaAmbiental">Licença Ambiental</label>
+            <select id="licencaAmbiental" name="licencaAmbiental">
+              <option value="">Selecione</option>
+              <option value="A PROTOCOLAR">A PROTOCOLAR</option>
+              <option value="ANALISE GEO">ANÁLISE GEO</option>
+              <option value="CANCELADO">CANCELADO</option>
+              <option value="CAPITANIA DOS PORTOS">CAPITANIA DOS PORTOS</option>
+              <option value="CONFIRMAR DOCUMENTO AMBIENTAL">CONFIRMAR DOCUMENTO AMBIENTAL</option>
+              <option value="ELABORAÇÃO DE ESTUDO">ELABORAÇÃO DE ESTUDO</option>
+              <option value="EM ANALISE NO ORGÃO AMBIENTAL">EM ANÁLISE NO ORGÃO AMBIENTAL</option>
+              <option value="LIBERADA AMBIENTALMENTE">LIBERADA AMBIENTALMENTE</option>
+              <option value="LICENÇA EMITIDA">LICENÇA EMITIDA</option>
+              <option value="LICENCIADA">LICENCIADA</option>
+              <option value="NÃO NECESSITA DE LICENÇA">NÃO NECESSITA DE LICENÇA</option>
+              <option value="SEM INF NA PLANILHA MEIO AMBIENTE">SEM INF NA PLANILHA MEIO AMBIENTE</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="retornoRegional">Retorno Regional</label>
+            <select id="retornoRegional" name="retornoRegional">
+              <option value="">Selecione</option>
+              <option value="SIM">SIM</option>
+              <option value="NÃO">NÃO</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Envio -->
+      <div class="actions">
+      <button type="submit">Enviar</button>
+      </div>
+      <div id="responseMessage" class="hidden"></div> <!-- Elemento para mensagens -->
+
+      <!-- Grupo: Planilha -->
+      <div class="group">
+        <h2>Planilha</h2>
+        <div class="row">
+          <!-- Campo de Pesquisa -->
+          <div class="input-group">
+            <label for="pesquisaNota">Pesquisar Nota</label>
+            <input type="number" id="pesquisaNota" placeholder="Digite a Nota">
+            <div class="botaoPesquisar"><button type="button" id="btnPesquisar">Pesquisar</button></div>
+          </div>
+        </div>
+        <!-- Tabela para exibir os dados -->
+        <table id="tabelaResultado">
+          <thead>
+            <tr>
+              <!-- Dados Gerais -->
+              <th>NOTA</th>
+              <th>PEP</th>
+              <th>REGIONAL</th>
+              <th>MUNICÍPIO</th>
+              <th>TIPO DE OBRA</th>
+              <th>DESCRIÇÃO DA OBRA</th>
+              <th>TRANCHE</th>
+              <th>PARCEIRA</th>
+              <th>ANO DEMANDA</th>
+              <th>ANO UNIVER.</th>
+              <th>NOTA ANTIGA</th>
+
+              <!-- Dados Físicos -->
+              <th>N° DE LIGAÇÕES</th>
+              <th>TOTAL KM</th>
+              
+              <!-- Retorno Regional -->
+              <th>LICENÇA AMBIENTAL</th>
+              <th>RETORNO REGIONAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas de dados serão adicionadas aqui dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+      
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
